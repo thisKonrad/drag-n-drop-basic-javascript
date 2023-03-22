@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag_n_Drop_API_basic</title>
+<link rel="stylesheet" href="drag_n_drop_style.css">
+</head>
+<body>
+
+<section class="drag-container">
+<!-- drag items drag base -->
+    <div class="drag-items" id="square">
+    <div draggable="true" class="drag-all" id="drag_01"></div>
+    </div>
+    
+    <div class="drag-items" id="circle">
+    <div draggable="true" class="drag-all" id="drag_02"></div>
+    </div>
+   
+    <div class="drag-items" id="triangle">
+    <div draggable="true" class="drag-all" id="drag_03"></div>
+    </div>
+  
+    <div class="drag-items" id="star">
+    <div draggable="true" class="drag-all" id="drag_04"></div>
+    </div>
+ 
+</section>
+
+<!-- the drop targets : -->
+<section class="drop-container">
+
+<div class ="drop-target" id="target_01">
+    <div contenteditable="true" class="drop-all" id="drop_01"></div>
+    </div>
+    
+    <div class ="drop-target" id="target_02">
+    <div contenteditable="true" class="drop-all" id="drop_02"></div>
+    </div>
+    
+    <div class ="drop-target" id="target_03">
+    <div contenteditable="true" class="drop-all" id="drop_03"></div>
+    </div>
+    
+    <div class ="drop-target" id="target_04">
+    <div contenteditable="true" class="drop-all" id="drop_04"></div>
+    </div>
+
+</section>
+
+<script src="main_.js">
+</script>
+
+</body>
+</html>

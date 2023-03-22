@@ -1,0 +1,158 @@
+/* Drag n Drop_API Style */
+
+:root{ box-sizing: border-box;
+    --colorBase: rgb(185, 185, 185);
+    --colorBorderDrop: rgb(65, 65, 65);
+    --color01: rgb(70, 170, 111);
+    --color02: rgb(50, 59, 185);
+    --color03: rgb(233, 18, 18);
+    --color04: rgb(238, 241, 11);
+}
+
+body{display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    max-width: 80em;
+    margin: 2rem auto;
+}
+
+.drag-container{ position:absolute;
+    margin-right: 40rem;
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: inherit;
+    flex-shrink: inherit;
+    gap: 0.8rem;
+}
+
+.drop-container{ position:absolute;
+    margin-left: 40rem;
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: inherit;
+    flex-shrink: inherit;
+    gap: 0.8rem;
+}
+
+.drag-all{ z-index:1; cursor: grab;}
+.drag-all:active{ cursor: grabbing;}
+
+.drag-base{ position:relative;
+    z-index: 2;
+    background: var(--colorBase);
+    margin: 1rem;
+    width: 10rem;
+    height: 10rem;}
+
+/* :: square :: */
+#drag_01{ position: relative;
+    background: var(--color01);
+    margin: 1rem;
+    width: 8rem;
+    height: 8rem;
+}
+
+/* :: circle :: */
+#drag_02{ position: relative;
+    background: var(--color02);
+    margin: 1rem;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+}
+
+/* :: triangle ::*/
+#drag_03{ position: relative;
+    margin: 1rem;
+    width: 0;
+    height: 0;
+    border-right: 4rem solid transparent;
+    border-bottom: 6.5rem solid var(--color03);
+    border-left: 4rem solid transparent;
+}
+
+/* :: star :: */
+#drag_04{ 
+    position: relative;
+    width: 0;
+    height: 0;
+    margin: 1rem;
+    border-right: 4rem solid transparent;
+    border-bottom: 6rem solid var(--color04);
+    border-left: 4rem solid transparent;
+}
+#drag_04::before{
+    position: relative;
+    width: 0;
+    height: 0;
+    margin: 1rem;
+    top: 8rem;
+    right: 5rem;
+    content:'';
+    border-right: 4rem solid transparent;
+    border-top: 6rem solid var(--color04);
+    border-left: 4rem solid transparent;
+}
+
+/* :: animation for dragover :: */
+.dragover-roll{ animation: roll infinite;
+    transition: 200ms;}
+@keyframes roll{
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+}
+
+/* :: drop targets :: */
+.drop-target{
+    cursor:pointer;
+}
+.drop-target:hover{
+    transform: scale(104%);
+    opacity: 60%;
+}
+
+#drop_01{
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+    border: 0.25rem solid var(--colorBorderDrop);
+    background-color: var(--colorBase);
+}
+
+#drop_02{
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+    border: 0.25rem solid var(--colorBorderDrop);
+    background-color: var(--colorBase);
+}
+
+#drop_03{
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+    border: 0.25rem solid var(--colorBorderDrop);
+    background-color: var(--colorBase);
+}
+
+#drop_04{
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+    border: 0.25rem solid var(--colorBorderDrop);
+    background-color: var(--colorBase);
+}
